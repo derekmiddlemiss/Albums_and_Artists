@@ -36,7 +36,8 @@ solitude_standing.delete()
 
 # Should the delete methods above delete the object as well as the entry in the database?
 
-
+hopefully_suzanne_vega = Artist.find( suzanne_vega.id )
+hopefully_flowers_in_the_dirt = Album.find( flowers_in_the_dirt.id )
 
 binding.pry
 nil

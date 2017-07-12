@@ -40,6 +40,12 @@ class Artist
     # Should we also delete associated object?
   end
 
+  def self.find( search_id )
+    sql = "SELECT * FROM artists WHERE id = #{search_id};"
+    result = SqlRunner.run( sql )
+    return Artist.new( result[0] )
+  end
+
   def self.list
     sql = "SELECT * FROM artists;"
     result = SqlRunner.run( sql )
